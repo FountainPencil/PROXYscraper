@@ -26,6 +26,7 @@ def json_create():
 def json_config():
     with open('config.json', 'r') as f:
         doit = json.load(f)
+        return doit
 
 def json_makeconfig():
     for i in range(4):
