@@ -25,7 +25,7 @@ def json_create():
 
 def json_config():
     with open('config.json', 'r') as f:
-        parsnip = json.load(f)
+        doit = json.load(f)
 
 def json_makeconfig():
     for i in range(4):
@@ -65,17 +65,17 @@ else:
 
 if os.path.exists("config.json"):
     print("config exists")
-    parsnip = json_config()
+    doit = json_config()
 else:
     print("NO CONFIG DATA")
     time.sleep(2)
     json_makeconfig()
-    parsnip = json_config()
+    doit = json_config()
     for i in range(10):
         print("the following are case sensistive")
 
 
-print(parsnip['ProtocolColumnName'])
+print(doit['ProtocolColumnName'])
 
 
 print("*********************************************")
